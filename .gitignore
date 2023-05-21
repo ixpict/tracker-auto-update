@@ -1,2 +1,5 @@
 .venv
 config.yml
+.vscode
+*.tar
+*.pyc
