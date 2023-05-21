@@ -38,3 +38,10 @@ TRANSMISSION_UPDATE_INTERVAL | 360 | Update tracker list every 360s |
 TRANSMISSION_UPDATE_INTERVAL_TRACKER_LIST | 21600 | Update trackers list every 21600 seconds |
 TRANSMISSION_TRACKER_LIST_URL | https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt | Url to new-line seperated files with trackers |
 TRANSMISSION_TRACKER_LIST | '' | Comma-seprated list with user-specific torrent, example: 'http://retracker.local/announce,https://retracker.local/announce' |
+
+## Export image for Docker (linux/amd64) to file system on Apple Sillicon
+
+```bash
+docker buildx build --load --platform linux/amd64 -t update-torrents:latest .
+docker image save update-torrents:latest > update-torrents-amd64.tar
+```
