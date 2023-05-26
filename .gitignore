@@ -3,3 +3,4 @@ config.yml
 .vscode
 *.tar
 *.pyc
+.DS_Store
